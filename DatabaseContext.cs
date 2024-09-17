@@ -20,20 +20,19 @@ namespace WhedNamespace
         {
             List<string> data = new List<string>();
 
-            try{
+            try
+            {
                 using (MySqlConnection conn = new MySqlConnection(_connectionString))
                 {
                     await conn.OpenAsync();
-                    _logger.LogInformation("MySQL Connection Successful");
+                    _logger.LogInformation("Database connection opened successfully.");
 
-                    // Modified SQL query with CAST for safety
-                    using (MySqlCommand cmd = new MySqlCommand("SELECT CAST(OrgID AS CHAR) AS OrgID, CAST(OrgName AS CHAR) AS OrgName FROM whed_org", conn))
+                    using (MySqlCommand cmd = new MySqlCommand("SELECT OrgID, OrgName FROM whed_org", conn))
                     {
                         using (var reader = await cmd.ExecuteReaderAsync())
                         {
                             while (await reader.ReadAsync())
                             {
-                                // Using GetOrdinal to ensure correct indexing
                                 data.Add(reader.GetString(reader.GetOrdinal("OrgID")));
                                 data.Add(reader.GetString(reader.GetOrdinal("OrgName")));
                             }
@@ -43,11 +42,11 @@ namespace WhedNamespace
             }
             catch (Exception ex)
             {
-                _logger.LogError("Error with connection: " + ex.Message);
+                _logger.LogError($"Error connecting to the database: {ex.Message}");
             }
 
             return data;
         }
-
     }
 }
+

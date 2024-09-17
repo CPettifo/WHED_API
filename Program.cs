@@ -1,4 +1,3 @@
-using Microsoft.VisualBasic;
 using WhedNamespace;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,8 +13,7 @@ builder.Services.AddSingleton<DatabaseContext>(provider =>
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 
-
-
+// Build and configure the app
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -33,4 +31,16 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+// Run the app in a try-catch block
+try
+{
+    Console.WriteLine($"Environment: {app.Environment.EnvironmentName}");
+
+    app.Run();
+
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Application startup failed: {ex.Message}");
+    Console.Out.Flush();
+}
