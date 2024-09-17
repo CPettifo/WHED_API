@@ -10,3 +10,4 @@ To run this project you'll need to have dotnet installed on your computer (found
 
 I highly recommend using Git Bash (found here - https://git-scm.com/downloads) as you can run both git commands as well as standard bash commands on windows systems.
 
+For now the API works on a locally hosted mysql server until we agree on how to connect to the Azure db
