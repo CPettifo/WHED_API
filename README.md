@@ -4,4 +4,10 @@ This API is a proof of concept that a copy of the WHED can be accessed securely 
 Contributors will be credited in the NOTICE file.
 
 ## Setup
-To run this project I'm using Flask, this will overwrite all of the .net work that has been done so far
+This is a Flask app and requires the following pip modules
+
+```
+pip install Flask
+pip install flask_mysqldb
+```
+
