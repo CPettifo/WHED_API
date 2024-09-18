@@ -4,10 +4,4 @@ This API is a proof of concept that a copy of the WHED can be accessed securely 
 Contributors will be credited in the NOTICE file.
 
 ## Setup
-To run this project you'll need to have dotnet installed on your computer (found here - https://dotnet.microsoft.com/en-us/download), as well as the MySql.Data package which can be installed with the command below once you have dotnet.
-
-`dotnet add package MySql.Data`
-
-I highly recommend using Git Bash (found here - https://git-scm.com/downloads) as you can run both git commands as well as standard bash commands on windows systems.
-
-For now the API works on a locally hosted mysql server until we agree on how to connect to the Azure db
+To run this project I'm using Flask, this will overwrite all of the .net work that has been done so far
