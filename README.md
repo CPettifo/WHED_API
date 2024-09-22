@@ -54,6 +54,7 @@ password: zenziW-koxzo0-fuxhuc
 ##### Example requests
 
 ```bash
+# login (returns an access token)
 curl --request POST \
   --url http://localhost:7071/api/login \
   --header 'content-type: application/json' \
@@ -64,6 +65,7 @@ curl --request POST \
 ```
 
 ```bash
+# get a list of currencies
 curl --request GET \
   --url http://localhost:7071/api/currency \
   --header 'Authorization: Bearer <copy-access-token-from-login-call>'
