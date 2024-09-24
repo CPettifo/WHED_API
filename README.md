@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 ### Running locally
 
-ensure that you have setup environment variables with correct configuration
+Ensure that you have setup environment variables with correct configuration
 for your development environment (see .env.example). The service attempt to
 will load from a .env if the file is present.
 
