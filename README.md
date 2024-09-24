@@ -71,4 +71,26 @@ curl --request GET \
   --header 'Authorization: Bearer <copy-access-token-from-login-call>'
 ```
 
+```bash
+# add new currency record
+curl --request POST \
+  --url http://localhost:7071/api/currency \
+  --header 'Authorization: Bearer <copy-access-token-from-login-call>' \
+  --header 'content-type: application/json' \
+  --data '{
+  "currency_code": "TST",
+  "currency_name": "TEST"
+}'
+```
 
+```bash
+# delete the currency with code TST
+curl --request DELETE \
+  --url http://localhost:7071/api/currency/TST \
+  --header 'Authorization: Bearer <copy-access-token-from-login-call>' \
+  --header 'content-type: application/json' \
+  --data '{
+  "username": "test@example.com",
+  "password": "zenziW-koxzo0-fuxhuc"
+}'
+```
