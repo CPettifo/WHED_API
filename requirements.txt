@@ -3,3 +3,5 @@ mysql-connector-python
 python-dotenv
 auth0-python
 python-jose[cryptography]
+pytest
+pytest-mock
