@@ -93,11 +93,7 @@ curl --request POST \
 curl --request DELETE \
   --url http://localhost:7071/api/currency/TST \
   --header 'Authorization: Bearer <copy-access-token-from-login-call>' \
-  --header 'content-type: application/json' \
-  --data '{
-  "username": "test@example.com",
-  "password": "zenziW-koxzo0-fuxhuc"
-}'
+  --header 'content-type: application/json'
 ```
 
 ### Run the tests
