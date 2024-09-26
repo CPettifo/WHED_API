@@ -92,8 +92,7 @@ curl --request POST \
 # delete the currency with code TST
 curl --request DELETE \
   --url http://localhost:7071/api/currency/TST \
-  --header 'Authorization: Bearer <copy-access-token-from-login-call>' \
-  --header 'content-type: application/json'
+  --header 'Authorization: Bearer <copy-access-token-from-login-call>'
 ```
 
 ### Run the tests
