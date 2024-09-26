@@ -41,6 +41,7 @@ func start
 ### testing locally
 
 ##### Use a testing client
+
 ```bash
 # install / use testing program
 
@@ -97,4 +98,10 @@ curl --request DELETE \
   "username": "test@example.com",
   "password": "zenziW-koxzo0-fuxhuc"
 }'
+```
+
+# Run the tests
+
+```bash
+python -m unittest test_function_app.py
 ```
