@@ -100,7 +100,7 @@ curl --request DELETE \
 }'
 ```
 
-# Run the tests
+### Run the tests
 
 ```bash
 python -m unittest test_function_app.py
