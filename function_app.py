@@ -77,8 +77,6 @@ def delete_currency(req: func.HttpRequest, current_user) -> func.HttpResponse:
 @auth.protected
 def post_currency(req: func.HttpRequest, current_user) -> func.HttpResponse:
 
-    logging.info(current_user)
-
     body = req.get_json()
     if not body:
         return func.HttpResponse(
