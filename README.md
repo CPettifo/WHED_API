@@ -104,7 +104,7 @@ python -m unittest test_function_app.py
 
 ### Deployment
 
-This project follows established, standard patterns for Azure Cloud deployment, as deployment guides are readily available from Microsoft.
+This project follows established, standard patterns for Azure Cloud Functions using Python, so deployment guides are readily available from Microsoft.
 
 #### Configure Azure Cloud Function
 
