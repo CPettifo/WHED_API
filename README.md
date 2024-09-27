@@ -100,3 +100,24 @@ curl --request DELETE \
 ```bash
 python -m unittest test_function_app.py
 ```
+
+
+### Deployment
+
+This project follows established, standard patterns for Azure Cloud deployment, as deployment guides are readily available from Microsoft.
+
+#### Configure Azure Cloud Function
+
+Follow the guide [here](https://learn.microsoft.com/en-us/azure/azure-functions/functions-create-function-app-portal?pivots=programming-language-python) to create the serverless function.
+
+Or update your organizations infrastructure codebase (Azure Resource Manager, Terraform, Pulumi etc) so that the cloud function is managed by your organizations IaC tool of choice.
+
+#### Application Settings
+
+We recommend using [Application Settings](https://learn.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings?tabs=azure-portal%2Cto-premium) to inject the environment variables for each deployment environment. See `.env.example` file for a list of required environment variables.
+
+Secrets can be stored in [Key Vault](https://azure.microsoft.com/en-au/products/key-vault) and [referenced in application settings](https://learn.microsoft.com/en-us/azure/app-service/app-service-key-vault-references?tabs=azure-cli).
+
+#### Continuous Deployment
+
+We recommend GitOps / Github actions for ongoing deployments to Azure. A full guide can be found [here](https://learn.microsoft.com/en-us/azure/azure-functions/functions-how-to-github-actions?tabs=linux%2Cdotnet&pivots=method-cli).
